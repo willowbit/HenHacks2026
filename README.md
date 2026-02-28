@@ -1,6 +1,6 @@
 # HenHacks2026
 
-Public Government Identity Verification
+Public Government Identity Verification System
 
 The problem:
 
@@ -8,4 +8,4 @@ Identitiy verification, specifically age verification, is a leading issue in the
 
 Current solutions rely on trusting third party services and trusting their claims for encryption and ephemerality. However, the multiple data breaches of these services make it clear that this solution is inadequate.
 
-The solution
+The solution:
