@@ -28,21 +28,19 @@ let license = (await getText())[0].split("\n");
 let licenseNumber = license[0];
 licenseNumber = licenseNumber.replace("4d pLN:", "");
 licenseNumber = licenseNumber.replaceAll(" ", "");
-let numList = []
-
-for (let number = 0; number < licenseNumber.length; number++) {
-  numList.push(licenseNumber[number])
-}
-
-export const dlNumber = numList;
 
 let dateOfBirth = license[1];
 dateOfBirth = dateOfBirth.replace("Q poe:", "");
 dateOfBirth = dateOfBirth.replaceAll("/", "");
 
-export const dobNumber = dateOfBirth;
+ddAndDob = licenseNumber + dateOfBirth;
 
-console.log(licenseNumber);
-console.log(dlNumber);
-console.log(dateOfBirth);
+dlDobVar = []
+
+for (let number = 0; number < ddAndDob.length; number ++) {
+  ddDobVar.push(ddAndDob(number))
+}
+
+export const dldob = dlDobVar;
+
 // getText();
