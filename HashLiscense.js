@@ -1,7 +1,7 @@
 export function charToAscii(name) {
     let asciiName = [];
     for (let character = 0; character < name.length; character ++) 
-        {asciiValue = name[character].charCodeAt();
+        {let asciiValue = name[character].charCodeAt();
         asciiName.push(asciiValue);
         };
     console.log(asciiName)
@@ -11,7 +11,7 @@ export function charToAscii(name) {
 export function asciiToChar(name) {
     let charName = [];
     for (let character = 0; character < name.length; character ++) 
-        {charValue = String.fromCharCode(name[character]);
+        {let charValue = String.fromCharCode(name[character]);
         charName.push(charValue);
         };
     console.log(charName);

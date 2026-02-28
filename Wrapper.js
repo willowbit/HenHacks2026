@@ -43,6 +43,6 @@ dateOfBirth = dateOfBirth.replaceAll("/", "");
 export const dobNumber = dateOfBirth;
 
 console.log(licenseNumber);
-console.log(numList);
+console.log(dlNumber);
 console.log(dateOfBirth);
 // getText();
