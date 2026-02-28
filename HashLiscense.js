@@ -1,8 +1,7 @@
 function charToAscii(name) {
-    let legalName = name
     let asciiName = [];
-    for (let character = 0; character < legalName.length; character ++) 
-        {asciiValue = legalName.charCodeAt(character);
+    for (let character = 0; character < name.length; character ++) 
+        {asciiValue = name[character].charCodeAt();
         asciiName.push(asciiValue);
         };
     console.log(asciiName)
