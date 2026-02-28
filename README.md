@@ -1,13 +1,11 @@
 # HenHacks2026
 
-This is the first push!
+Public Government Identity Verification
 
-hen hack
+The problem:
 
-wilson add 
+Identitiy verification, specifically age verification, is a leading issue in the modern web. Faced with calls to protect children from adult content and manipulation, governments are equally burdened with an expectation to preserve citizen's privacy on the internet.
 
-i hate mel 
+Current solutions rely on trusting third party services and trusting their claims for encryption and ephemerality. However, the multiple data breaches of these services make it clear that this solution is inadequate.
 
-Mel Add
-
-Evan add
+The solution
