@@ -1,6 +1,6 @@
 
 
-function CombineList(hashedDL) {
+export function CombineList(hashedDL) {
     let hashedDLstring = "";
     for (let i = 0; i <hashedDL.length; i++){
         hashedDLstring = hashedDLstring + hashedDL[i].toString();
@@ -10,7 +10,7 @@ function CombineList(hashedDL) {
 
 console.log(CombineList([23,24,25,25,156,465]));
 
-function fillLicense(license){
+export function fillLicense(license){
     let filler = 21 - license.length;
     if (license.length < 21){
         while(license.length < 21){
@@ -20,4 +20,4 @@ function fillLicense(license){
     return license;
 }
 
-console.log(fillLicense(CombineList([23,24,25,25,1,5])));
+console.log(fillLicense(CombineList([23,24,25,25,165,500])));
