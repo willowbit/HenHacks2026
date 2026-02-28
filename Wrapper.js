@@ -23,18 +23,23 @@ async function getText() {
   await worker.terminate();
 }
 
+// gets license information
 let license = (await getText())[0].split("\n");
 
+// format the license number as one string
 let licenseNumber = license[0];
 licenseNumber = licenseNumber.replace("4d pLN:", "");
 licenseNumber = licenseNumber.replaceAll(" ", "");
 
+// format the date of birth as one string
 let dateOfBirth = license[1];
 dateOfBirth = dateOfBirth.replace("Q poe:", "");
 dateOfBirth = dateOfBirth.replaceAll("/", "");
 
+// concatenate the license and date of birth strings as one string
 let ddAndDob = licenseNumber + dateOfBirth;
 
+// convert the license+number into a list made up of individual digits
 let dlDobVar = []
 
 for (let number = 0; number < ddAndDob.length; number ++) {
@@ -42,6 +47,3 @@ for (let number = 0; number < ddAndDob.length; number ++) {
 }
 
 export const dldob = dlDobVar;
-
-console.log(dldob)
-// getText();
