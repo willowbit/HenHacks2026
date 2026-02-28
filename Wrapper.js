@@ -17,22 +17,19 @@ const rectangles = [
 ];
 
 
-async function gimmevals() {
+async function getText() {
     const values = [];
   for (let i = 0; i < rectangles.length; i++) {
     const { data: { text } } = await worker.recognize('dl.png', { rectangle: rectangles[i] });
     values.push(text);
   }
   // return values;
-  console.log(values)
+  return values;
+  // console.log(values);
   await worker.terminate();
 }
 
-gimmevals()
-
-// function x() {
-//   let y = gimmevals();
-//   console.log(y);
-// }
-
-// x()
+async function parseText() {
+  let txt = getText()
+  console.log(txt)
+}
