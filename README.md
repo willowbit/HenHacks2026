@@ -1,2 +1,3 @@
 # HenHacks2026
-ELITE HACKERZ
+
+This is the first push!
