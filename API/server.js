@@ -14,10 +14,9 @@ app.get('/people:hash', (req, res) => {
     console.log(fart)
     let success = false;
     for (x of fart) {
-        console.log(x)
-        console.log(fart)
         if (x == req.params.hash.slice(1)) {
             success = true;
+            break;
         } else {
             success = false;
         }
