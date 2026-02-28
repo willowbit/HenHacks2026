@@ -29,7 +29,5 @@ async function getText() {
   await worker.terminate();
 }
 
-async function parseText() {
-  let txt = getText()
-  console.log(txt)
-}
+console.log(await getText());
+// getText();
