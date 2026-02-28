@@ -33,14 +33,15 @@ let dateOfBirth = license[1];
 dateOfBirth = dateOfBirth.replace("Q poe:", "");
 dateOfBirth = dateOfBirth.replaceAll("/", "");
 
-ddAndDob = licenseNumber + dateOfBirth;
+let ddAndDob = licenseNumber + dateOfBirth;
 
-dlDobVar = []
+let dlDobVar = []
 
 for (let number = 0; number < ddAndDob.length; number ++) {
-  ddDobVar.push(ddAndDob(number))
+  dlDobVar.push(ddAndDob[number])
 }
 
 export const dldob = dlDobVar;
 
+console.log(dldob)
 // getText();
