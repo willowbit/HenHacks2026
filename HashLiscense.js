@@ -22,7 +22,7 @@ function asciiToChar(name) {
 
 function HashName(asciiName) {
     for (let i=0; i<asciiName.length; i++){
-        asciiName[i] = (asciiName[i] + 40)%126
+        asciiName[i] = ((asciiName[i] + 40)%126 +32)
    
     }
     return asciiName
