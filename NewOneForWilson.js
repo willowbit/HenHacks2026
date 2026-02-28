@@ -9,4 +9,4 @@ console.log("CombineList:" + CombineList(HashName(charToAscii(dldob))))
 console.log("fillLicense:" + fillLicense(CombineList(HashName(charToAscii(dldob)))))
 
 
-console.log("THIS IS DLNUM: " + dlNumber)
+console.log("THIS IS DLDOB: " + dldob)
