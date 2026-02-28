@@ -1,4 +1,6 @@
 
+// Takes a list of the hashed drivers license numbers 
+// and returns the same numbers but in a string of numbers
 
 export function CombineList(hashedDL) {
     let hashedDLstring = "";
@@ -8,7 +10,12 @@ export function CombineList(hashedDL) {
     return hashedDLstring;
 }
 
-console.log(CombineList([23,24,25,25,156,465]));
+
+//  If the number post-hash does not have the max number of digits,
+// it will fill in 0 until it is at max digits
+
+// This is currently not doing anything, however, if changed to 
+// also take name, it would
 
 export function fillLicense(license){
     let filler = 24 - license.length;
@@ -19,5 +26,3 @@ export function fillLicense(license){
     }
     return license;
 }
-
-console.log(fillLicense(CombineList([23,24,25,25,165,500])));
