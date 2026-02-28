@@ -11,10 +11,12 @@ app.get('/people:hash', (req, res) => {
     
     let fart = fs.readFileSync('hashes.txt', { encoding: 'utf8', flag: 'r' })
     fart = fart.split('\n');
+    console.log(fart)
     let success = false;
     for (x of fart) {
         if (x == req.params.hash.slice(1)) {
             success = true;
+            break;
         } else {
             success = false;
         }
