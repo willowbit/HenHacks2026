@@ -29,13 +29,18 @@ let licenseNumber = license[0];
 licenseNumber = licenseNumber.replace("4d pLN:", "");
 licenseNumber = licenseNumber.replaceAll(" ", "");
 let numList = []
+
 for (let number = 0; number < licenseNumber.length; number++) {
   numList.push(licenseNumber[number])
 }
 
+export const dlNumber = numList;
+
 let dateOfBirth = license[1];
 dateOfBirth = dateOfBirth.replace("Q poe:", "");
 dateOfBirth = dateOfBirth.replaceAll("/", "");
+
+export const dobNumber = dateOfBirth;
 
 console.log(licenseNumber);
 console.log(numList);
