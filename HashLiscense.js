@@ -1,4 +1,4 @@
-function charToAscii(name) {
+export function charToAscii(name) {
     let asciiName = [];
     for (let character = 0; character < name.length; character ++) 
         {asciiValue = name[character].charCodeAt();
@@ -8,7 +8,7 @@ function charToAscii(name) {
     return(asciiName);
 }
 
-function asciiToChar(name) {
+export function asciiToChar(name) {
     let charName = [];
     for (let character = 0; character < name.length; character ++) 
         {charValue = String.fromCharCode(name[character]);
@@ -19,7 +19,7 @@ function asciiToChar(name) {
     }  
 
 
-function HashName(asciiName) {
+export function HashName(asciiName) {
     for (let i=0; i<asciiName.length; i++){
         asciiName[i] = ((asciiName[i] + 40)%126 +32)
    
