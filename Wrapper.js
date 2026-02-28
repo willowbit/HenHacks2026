@@ -8,12 +8,6 @@ const rectangles = [
     width: 320,
     height: 240,
   },
-  {
-    left: 0,
-    top: 630,
-    width: 640,
-    height: 130,
-  },
 ];
 
 
@@ -29,5 +23,21 @@ async function getText() {
   await worker.terminate();
 }
 
-console.log(await getText());
+let license = (await getText())[0].split("\n");
+
+let licenseNumber = license[0];
+licenseNumber = licenseNumber.replace("4d pLN:", "");
+licenseNumber = licenseNumber.replaceAll(" ", "");
+let numList = []
+for (let number = 0; number < licenseNumber.length; number++) {
+  numList.push(licenseNumber[number])
+}
+
+let dateOfBirth = license[1];
+dateOfBirth = dateOfBirth.replace("Q poe:", "");
+dateOfBirth = dateOfBirth.replaceAll("/", "");
+
+console.log(licenseNumber);
+console.log(numList);
+console.log(dateOfBirth);
 // getText();
