@@ -1,3 +1,25 @@
+function charToAscii(name) {
+    let legalName = name
+    let asciiName = [];
+    for (let character = 0; character < legalName.length; character ++) 
+        {asciiValue = legalName.charCodeAt(character);
+        asciiName.push(asciiValue);
+        };
+    console.log(asciiName)
+    return(asciiName);
+}
+
+function asciiToChar(name) {
+    let charName = [];
+    for (let character = 0; character < name.length; character ++) 
+        {charValue = String.fromCharCode(name[character]);
+        charName.push(charValue);
+        };
+    console.log(charName);
+    return(charName)
+    }  
+
+
 function HashName(asciiName) {
     for (let i=0; i<asciiName.length; i++){
         asciiName[i] = (asciiName[i] + 40)%126
