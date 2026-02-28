@@ -1,6 +1,8 @@
-import { createWorker } from 'tesseract.js';
+import { createWorker } from 'tesseract.js'; // import tesseract library!
 
+// create tesseract worker
 const worker = await createWorker('eng');
+// create rectangles for DL information
 const rectangles = [
   {
     left: 320,
@@ -10,16 +12,15 @@ const rectangles = [
   },
 ];
 
-
+// loads image and runs text recognition
 async function getText() {
     const values = [];
   for (let i = 0; i < rectangles.length; i++) {
     const { data: { text } } = await worker.recognize('dl.png', { rectangle: rectangles[i] });
     values.push(text);
   }
-  // return values;
+  // returns string of values
   return values;
-  // console.log(values);
   await worker.terminate();
 }
 
