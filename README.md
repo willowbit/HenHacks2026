@@ -1,6 +1,8 @@
 # HenHacks2026
 
-Public Government Identity Verification System
+## Public Government Identity Verification System
+
+![](src/site/MelWareLogo.png)
 
 The problem:
 
