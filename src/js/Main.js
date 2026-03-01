@@ -1,6 +1,8 @@
-import {charToAscii, splitLicenseDob, finalHashing, CombineList} from "./HashLiscense.js";
-import{dldob} from "./Wrapper.js";
+import {charToAscii, splitLicenseDob, finalHashing, CombineList} from "./hashAlgorithm.js";
+import * as fs from 'fs';
 
+const dldob = fs.readFileSync('../data/tmp.txt')
+console.log(dldob)
 
 console.log("charToAscii:" + charToAscii(dldob))
 console.log("HashName:" + splitLicenseDob((charToAscii(dldob))))
