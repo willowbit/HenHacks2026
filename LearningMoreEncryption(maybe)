@@ -1,3 +1,4 @@
+
 function splitLicenseDob(plainText){
     let midPoint = plainText.length/2;
     let leftPlainText = plainText.slice(0,midPoint);
