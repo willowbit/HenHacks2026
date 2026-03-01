@@ -29,8 +29,14 @@ function finalHashing(quarts){
             fourQuarts.push(quarts[i][j])
 
     }
+
+    for (let i=0; i<fourQuarts.length; i++){
+        fourQuarts[i] = ((fourQuarts[i] + 37)%126 +32)
+    }
+
     return fourQuarts;
 }
+
 
 
 
@@ -42,3 +48,5 @@ let myDL = ['2','2','3','8','4','3','7','2','0','3','1','4','2','0','0','7']
 
 console.log(splitLicenseDob(myDL))
 console.log(finalHashing(splitLicenseDob(myDL)))
+console.log(splitLicenseDob(finalHashing(splitLicenseDob(myDL))))
+console.log(finalHashing(splitLicenseDob(finalHashing(splitLicenseDob(myDL)))))
