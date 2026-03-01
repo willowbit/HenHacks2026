@@ -17,6 +17,7 @@ export function charToAscii(name) {
 //Input: list[str]
 //Output:list[list[str]]
 export function splitLicenseDob(plainText){
+    let x = [];
     let midPoint = plainText.length/2;
     let leftPlainText = plainText.slice(0,midPoint);
     let rightPlainText = plainText.slice(midPoint);
@@ -25,7 +26,8 @@ export function splitLicenseDob(plainText){
     let secondQuart = leftPlainText.slice(secondMidPoint);
     let thirdQuart = rightPlainText.slice(0,secondMidPoint);
     let fourthQuart = rightPlainText.slice(secondMidPoint);
-    return [firstQuart,secondQuart,thirdQuart,fourthQuart];
+    x.push(firstQuart, secondQuart, thirdQuart, fourthQuart)
+    return x
 }
 
 //Hashes each list from splitLicenseDob and recombines them
@@ -44,7 +46,7 @@ export function finalHashing(quarts){
     for (let i=0; i<quarts[3].length; i++){
         quarts[3][i] = ((quarts[3][i] + 50)%126 +32)
     }
-    console.log("Test: "+quarts)
+    console.log("Test: " + quarts)
     let fourQuarts = [];
     for (let i=0; i<quarts.length; i++){
         for (let j=0; j<quarts[i].length; j++)
@@ -59,11 +61,16 @@ export function finalHashing(quarts){
 // and returns the same numbers but in a string of numbers
 
 export function CombineList(hashedDL) {
-    let hashedDLstring = "";
-    for (let i = 0; i <hashedDL.length; i++){
-        hashedDLstring = hashedDLstring + hashedDL[i].toString();
-    }
-    return hashedDLstring;
+    // let hashedDLstring = "";
+    // for (let i = 0; i <hashedDL.length; i++){
+    //     hashedDLstring = hashedDLstring + hashedDL[i].toString();
+    // }
+    // return hashedDLstring;
+    console.log("HASHEDDL" + hashedDL);
+    // console.log("TYPEOF: " + typeof(hashedDL))
+    // console.log("AHHHHHHHHHHH" + hashedDL)
+    // console.log(typeof(hashedDL))
+    // return hashedDL.split(', ').join()
 };
 
 

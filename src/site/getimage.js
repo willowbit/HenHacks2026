@@ -6,8 +6,7 @@ document.getElementById("idform").addEventListener("submit", function(e) {
     reader.onload = function(e) {
         localStorage.setItem("uploadedId", e.target.result);
         window.location.href = "displayId.html";
-        b = reader.readAsArrayBuffer()
-        console.log(b)
+        console.log(file)
     };
     reader.readAsDataURL(file)
 })

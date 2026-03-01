@@ -33,7 +33,7 @@ function calculateAge(date){
 return currentYear - dateOfBirth
 }
 
-function checkAge(age){
+export function checkAge(age){
     let oldEnough = false
     if (age >= 18){
         oldEnough = true

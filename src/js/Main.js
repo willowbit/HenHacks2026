@@ -1,6 +1,12 @@
 import {charToAscii, splitLicenseDob, finalHashing, CombineList} from "./hashAlgorithm.js";
 import fs from 'fs'
-import {calculateAge, checkAge} from ".ageChecker.js"
+import {checkAge} from "./ageChecker.js"
+
+if (checkAge) {
+  console.log("proceed")
+} else {
+  console.log("you are too young!")
+}
 
 // read DLN + DOB number from data/tmp.txt
 var dldob = fs.readFileSync('data/tmp.txt', { encoding: 'utf8', flag: 'r' });
@@ -10,11 +16,9 @@ console.log("original: " + dldob)
 console.log("charToAscii:" + charToAscii(dldob))
 console.log("HashName:" + splitLicenseDob((charToAscii(dldob))))
 console.log("CombineList:" + finalHashing(splitLicenseDob(charToAscii(dldob))))
-console.log("CombineList:" + CombineList(finalHashing(splitLicenseDob(charToAscii(dldob)))))
+var finalHash = CombineList(finalHashing(splitLicenseDob(charToAscii(dldob))))
 
 // check resulting hash against government API
-
-var finalHash = "guh"
 
 async function getData() {
   const url = "http://localhost:3000/people:" + finalHash;
