@@ -1,5 +1,6 @@
 import {charToAscii, splitLicenseDob, finalHashing, CombineList} from "./hashAlgorithm.js";
 import fs from 'fs'
+import {calculateAge, checkAge} from ".ageChecker.js"
 
 // read DLN + DOB number from data/tmp.txt
 var dldob = fs.readFileSync('data/tmp.txt', { encoding: 'utf8', flag: 'r' });

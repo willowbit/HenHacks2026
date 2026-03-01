@@ -1,8 +1,8 @@
-// let myBirth = ['1','2','2','5','5','7','8','9','0','3','1','4','2','0','0','7']
+let myBirth = ['1','2','2','5','5','7','8','0','3','1','4','2','0','0','7']
 
 import fs from 'fs'
 
-// read DLN + DOB number from data/tmp.txt
+//read DLN + DOB number from data/tmp.txt
 var dldob = fs.readFileSync('data/tmp.txt', { encoding: 'utf8', flag: 'r' });
 
 const currentYear = Date.now() / 31540000000 + 1970
@@ -17,9 +17,9 @@ function calculateAge(date){
     let month = "";
     let day = "";
     let year = "";
-    let mob = date.slice(8,10);
-   let dob = date.slice(10,12);
-   let yob = date.slice(12);
+    let mob = date.slice(7,9);
+   let dob = date.slice(9,11);
+   let yob = date.slice(11);
     for (let i = 0; i < mob.length; i++){
         month += mob[i]
     }
@@ -40,7 +40,8 @@ function checkAge(age){
     }
     return oldEnough
 }
-console.log(calculateAge(myBirth));
 
-console.log(checkAge(calculateAge(myBirth)));
+console.log(calculateAge(dldob));
+
+console.log(checkAge(calculateAge(dldob)));
 console.log(currentYear);
