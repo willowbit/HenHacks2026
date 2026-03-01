@@ -1,8 +1,14 @@
-import {charToAscii, splitLicenseDob, finalHashing, CombineList} from "./HashLiscense.js";
-import{dldob} from "./Wrapper.js";
+import {charToAscii, splitLicenseDob, finalHashing, CombineList} from "./hashAlgorithm.js";
+import fs from 'fs'
 
+// read DLN + DOB number from data/tmp.txt
+var dldob = fs.readFileSync('data/tmp.txt', { encoding: 'utf8', flag: 'r' });
 
+// do hashAlgorithm.js
+console.log("original: " + dldob)
 console.log("charToAscii:" + charToAscii(dldob))
 console.log("HashName:" + splitLicenseDob((charToAscii(dldob))))
 console.log("CombineList:" + finalHashing(splitLicenseDob(charToAscii(dldob))))
 console.log("CombineList:" + CombineList(finalHashing(splitLicenseDob(charToAscii(dldob)))))
+
+// check resulting hash against government API

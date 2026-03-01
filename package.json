@@ -2,5 +2,6 @@
   "dependencies": {
     "tesseract.js": "^7.0.0",
     "usa-dl-ocr": "^1.0.0"
-  }
+  },
+  "type": "module"
 }

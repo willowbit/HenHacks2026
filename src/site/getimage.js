@@ -1,6 +1,6 @@
-document.getElementById("idform").addEventListener("submit", function(e)
-{e.preventDefault();
-    const file =document.getElementById("idpic").files[0];
+document.getElementById("idform").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const file = document.getElementById("idpic").files[0];
 
     const reader = new FileReader();
     reader.onload = function(e) {
