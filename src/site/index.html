@@ -12,39 +12,49 @@
             flex-direction: column;
             font-family: sans-serif;
         }
+        .container {
+            background-color: rgb(223, 201, 173);
+            width: 95%;
+            margin: auto;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            min-height: 95vh;
+        }
         main{
             flex: 1;
         }
     </style>
 </head>
 <body>
-    <header>
+    <div class = "container">
+        <header>
 
-        <h1>Melware Age Authentication</h1>
-    </header>
+            <h1>Melware Age Authentication</h1>
+        </header>
 
-    <hr>
+        <hr>
 
-    <main>
-        <label 
-        for="id">Upload a PNG of your ID
-        </label>
+        <main>
+            <label 
+            for="id">Upload a PNG of your ID
+            </label>
 
-        <form id="idform",>
-            
-            <input type = "file"
-            id = "idpic"
-            name = "idpic"
-            accept = "image/png"
-            /> 
-            <br>
-            <button type = "submit" >Upload</button>
-        </form>
-        <script src="getimage.js"></script>
-    </main>
-    <footer>
-        <a href="aboutus.html">About Us</a>
-    </footer>
-
+            <form id="idform",>
+                
+                <input type = "file"
+                id = "idpic"
+                name = "idpic"
+                accept = "image/png"
+                /> 
+                <br>
+                <button type = "submit" >Upload</button>
+            </form>
+            <script src="getimage.js"></script>
+        </main>
+        <footer>
+            <a href="aboutus.html">About Us</a>
+        </footer>
+    </div>
 </body>
 
