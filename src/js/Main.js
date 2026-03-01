@@ -12,3 +12,18 @@ console.log("CombineList:" + finalHashing(splitLicenseDob(charToAscii(dldob))))
 console.log("CombineList:" + CombineList(finalHashing(splitLicenseDob(charToAscii(dldob)))))
 
 // check resulting hash against government API
+
+var finalHash = "guh"
+
+async function getData() {
+  const url = "http://localhost:3000/people:" + finalHash;
+  try {
+    const response = await fetch(url);
+    const result = await response.json()
+    console.log(result)
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+getData()

@@ -9,7 +9,7 @@ app.use(express.json());
 // Define a route for GET requests
 app.get('/people:hash', (req, res) => {
     
-    let fart = fs.readFileSync('hashes.txt', { encoding: 'utf8', flag: 'r' })
+    let fart = fs.readFileSync('./hashes.txt', { encoding: 'utf8', flag: 'r' })
     fart = fart.split('\n');
     console.log(fart)
     let success = false;
