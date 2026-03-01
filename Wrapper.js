@@ -10,16 +10,24 @@ const rectangles = [
     width: 320,
     height: 240,
   },
+  // {
+  //   left: 0,
+  //   top: 2030,
+  //   width: 2230,
+  //   height: 645,
+  // }
+  
 ];
 
 // loads image and runs text recognition
 async function getText() {
     const values = [];
   for (let i = 0; i < rectangles.length; i++) {
-    const { data: { text } } = await worker.recognize('dl.png', { rectangle: rectangles[i] });
+    const { data: { text } } = await worker.recognize('wilson.jpg', { rectangle: rectangles[i] });
     values.push(text);
   }
   // returns string of values
+  console.log(values)
   return values;
   await worker.terminate();
 }
