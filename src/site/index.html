@@ -7,33 +7,41 @@
             background-color: burlywood;
             text-align: center;
             font-size: larger;
+            min-height: 95vh;
+            display: flex;
+            flex-direction: column;
+            font-family: sans-serif;
         }
-        header{
-            font-family: fantasy;
+        main{
+            flex: 1;
         }
     </style>
 </head>
 <body>
     <header>
 
-        <h1>Melware Safety</h1>
+        <h1>Melware Age Authentication</h1>
     </header>
+
     <hr>
-    <label 
-    for="id">Upload a png or jpeg of your id
-    </label>
 
-    <form id="idform",>
-        
-        <input type = "file"
-        id = "idpic"
-        name = "idpic"
-        accept = "image/png"
-        />
-        <button type = "submit" >Upload</button>
-    </form>
-    <script src="getimage.js"></script>
+    <main>
+        <label 
+        for="id">Upload a PNG of your ID
+        </label>
 
+        <form id="idform",>
+            
+            <input type = "file"
+            id = "idpic"
+            name = "idpic"
+            accept = "image/png"
+            /> 
+            <br>
+            <button type = "submit" >Upload</button>
+        </form>
+        <script src="getimage.js"></script>
+    </main>
     <footer>
         <a href="aboutus.html">About Us</a>
     </footer>
