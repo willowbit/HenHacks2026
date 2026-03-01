@@ -1,6 +1,9 @@
 import {charToAscii, splitLicenseDob, finalHashing, CombineList} from "./hashAlgorithm.js";
 import fs from 'fs'
 import {checkAge} from "./ageChecker.js"
+import { spawn } from 'child_process'
+
+// check age
 
 if (checkAge) {
   console.log("proceed")
@@ -8,8 +11,10 @@ if (checkAge) {
   console.log("you are too young!")
 }
 
+
 // read DLN + DOB number from data/tmp.txt
 var dldob = fs.readFileSync('data/tmp.txt', { encoding: 'utf8', flag: 'r' });
+
 
 // do hashAlgorithm.js
 // console.log("original: " + dldob)

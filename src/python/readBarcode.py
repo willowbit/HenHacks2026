@@ -3,7 +3,7 @@ from pdf417decoder import PDF417Decoder
 
 # crop image
 
-image = PIL.open("src/data/license.png")
+image = PIL.open("data/license.png")
 image = image.crop((52, 37, 1736, 520))
 
 # decode barcode
@@ -21,5 +21,5 @@ DOB = stuff[12].split("DBB")[1]
 NumAndDOB = str(DLN) + str(DOB)
 print(NumAndDOB)
 
-with open("tmp.txt", "a") as f:
+with open("data/tmp.txt", "w") as f:
     f.write(NumAndDOB)
