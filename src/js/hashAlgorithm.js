@@ -1,3 +1,4 @@
+let myBirth = ['1','2','2','5','5','7','8','9','0','3','1','4','2','0','0','7']
 
 // Converts list of chars to a list of Ascii values; feeds into HashName
 // Inputs: List[str]
@@ -43,17 +44,15 @@ export function finalHashing(quarts){
     for (let i=0; i<quarts[3].length; i++){
         quarts[3][i] = ((quarts[3][i] + 50)%126 +32)
     }
+    console.log("Test: "+quarts)
     let fourQuarts = [];
     for (let i=0; i<quarts.length; i++){
         for (let j=0; j<quarts[i].length; j++)
             fourQuarts.push(quarts[i][j])
-
-    for (let i=0; i<fourQuarts.length; i++){
-        fourQuarts[i] = ((fourQuarts[i] + 37)%126 +32)
     }
     return fourQuarts;
 }
-}
+
 
 
 // Takes a list of the hashed drivers license numbers 
@@ -83,4 +82,3 @@ export function fillLicense(license){
     }
     return license;
 };
-
