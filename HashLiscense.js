@@ -48,8 +48,11 @@ export function finalHashing(quarts){
         for (let j=0; j<quarts[i].length; j++)
             fourQuarts.push(quarts[i][j])
 
+    for (let i=0; i<fourQuarts.length; i++){
+        fourQuarts[i] = ((fourQuarts[i] + 37)%126 +32)
     }
     return fourQuarts;
+}
 }
 
 
@@ -73,8 +76,8 @@ export function CombineList(hashedDL) {
 
 export function fillLicense(license){
     let filler = 24 - license.length;
-    if (license.length < 24){
-        while(license.length < 24){
+    if (license.length < 48){
+        while(license.length < 48){
             license = license + "0"
         }
     }
