@@ -12,11 +12,12 @@ if (checkAge) {
 var dldob = fs.readFileSync('data/tmp.txt', { encoding: 'utf8', flag: 'r' });
 
 // do hashAlgorithm.js
-console.log("original: " + dldob)
-console.log("charToAscii:" + charToAscii(dldob))
-console.log("HashName:" + splitLicenseDob((charToAscii(dldob))))
-console.log("CombineList:" + finalHashing(splitLicenseDob(charToAscii(dldob))))
+// console.log("original: " + dldob)
+// console.log("charToAscii:" + charToAscii(dldob))
+// console.log("HashName:" + splitLicenseDob((charToAscii(dldob))))
+// console.log("CombineList:" + finalHashing(splitLicenseDob(charToAscii(dldob))))
 var finalHash = CombineList(finalHashing(splitLicenseDob(charToAscii(dldob))))
+console.log(finalHash)
 
 // check resulting hash against government API
 

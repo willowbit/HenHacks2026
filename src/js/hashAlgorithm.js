@@ -9,7 +9,7 @@ export function charToAscii(name) {
         {let asciiValue = name[character].charCodeAt();
         asciiName.push(asciiValue);
         };
-    console.log(asciiName);
+    console.log(typeof(asciiName));
     return(asciiName);
 };
 
@@ -52,6 +52,7 @@ export function finalHashing(quarts){
         for (let j=0; j<quarts[i].length; j++)
             fourQuarts.push(quarts[i][j])
     }
+    console.log("FOURQUARTS: " +fourQuarts)
     return fourQuarts;
 }
 
@@ -66,11 +67,18 @@ export function CombineList(hashedDL) {
     //     hashedDLstring = hashedDLstring + hashedDL[i].toString();
     // }
     // return hashedDLstring;
-    console.log("HASHEDDL" + hashedDL);
-    // console.log("TYPEOF: " + typeof(hashedDL))
+    // console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+    // let newlist = []
+    // for (const x of hashedDL) {
+    //     // console.log(x)
+    //     newlist.push()
+    // }
+    // console.log(newlist.join())
+    // console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
     // console.log("AHHHHHHHHHHH" + hashedDL)
     // console.log(typeof(hashedDL))
     // return hashedDL.split(', ').join()
+    return hashedDL.join("")
 };
 
 

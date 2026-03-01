@@ -1,7 +1,13 @@
 from PIL import Image as PIL
 from pdf417decoder import PDF417Decoder
 
-image = PIL.open("./wilson.png")
+# crop image
+
+image = PIL.open("src/data/license.png")
+image = image.crop((52, 37, 1736, 520))
+
+# decode barcode
+
 decoder = PDF417Decoder(image)
 
 if (decoder.decode() > 0):

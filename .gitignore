@@ -7,3 +7,4 @@ lib
 bin
 include
 pyvenv.cfg
+src/data/license.png
