@@ -1,4 +1,4 @@
-export function splitLicenseDob(plainText){
+function splitLicenseDob(plainText){
     let midPoint = plainText.length/2;
     let leftPlainText = plainText.slice(0,midPoint);
     let rightPlainText = plainText.slice(midPoint);
@@ -10,7 +10,7 @@ export function splitLicenseDob(plainText){
     return [firstQuart,secondQuart,thirdQuart,fourthQuart];
 }
 
-export function finalHashing(quarts){
+function finalHashing(quarts){
     for (let i=0; i<quarts[0].length; i++){
         quarts[0][i] = ((quarts[0][i] + 20)%126 +32)
     }
