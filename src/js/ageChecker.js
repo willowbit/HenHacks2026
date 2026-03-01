@@ -1,4 +1,9 @@
-let myBirth = ['1','2','2','5','5','7','8','9','0','3','1','4','2','0','0','7']
+// let myBirth = ['1','2','2','5','5','7','8','9','0','3','1','4','2','0','0','7']
+
+import fs from 'fs'
+
+// read DLN + DOB number from data/tmp.txt
+var dldob = fs.readFileSync('data/tmp.txt', { encoding: 'utf8', flag: 'r' });
 
 const currentYear = Date.now() / 31540000000 + 1970
 
