@@ -1,0 +1,52 @@
+function splitLicenseDob(plainText){
+    let midPoint = plainText.length/2;
+    let leftPlainText = plainText.slice(0,midPoint);
+    let rightPlainText = plainText.slice(midPoint);
+    let secondMidPoint = leftPlainText.length/2;
+    let firstQuart = leftPlainText.slice(0,secondMidPoint);
+    let secondQuart = leftPlainText.slice(secondMidPoint);
+    let thirdQuart = rightPlainText.slice(0,secondMidPoint);
+    let fourthQuart = rightPlainText.slice(secondMidPoint);
+    return [firstQuart,secondQuart,thirdQuart,fourthQuart];
+}
+
+function finalHashing(quarts){
+    for (let i=0; i<quarts[0].length; i++){
+        quarts[0][i] = ((quarts[0][i] + 20)%126 +32)
+    }
+    for (let i=0; i<quarts[1].length; i++){
+        quarts[1][i] = ((quarts[1][i] + 30)%126 +32)
+    }
+    for (let i=0; i<quarts[2].length; i++){
+        quarts[2][i] = ((quarts[2][i] + 40)%126 +32)
+    }
+    for (let i=0; i<quarts[3].length; i++){
+        quarts[3][i] = ((quarts[3][i] + 50)%126 +32)
+    }
+    let fourQuarts = [];
+    for (let i=0; i<quarts.length; i++){
+        for (let j=0; j<quarts[i].length; j++)
+            fourQuarts.push(quarts[i][j])
+
+    }
+
+    for (let i=0; i<fourQuarts.length; i++){
+        fourQuarts[i] = ((fourQuarts[i] + 37)%126 +32)
+    }
+
+    return fourQuarts;
+}
+
+
+
+
+///export function combineHalves(leftHalf,rightHalf){
+   // return leftHalf + rightHalf
+//}
+
+let myDL = ['2','2','3','8','4','3','7','2','0','3','1','4','2','0','0','7']
+
+console.log(splitLicenseDob(myDL))
+console.log(finalHashing(splitLicenseDob(myDL)))
+console.log(splitLicenseDob(finalHashing(splitLicenseDob(myDL))))
+console.log(finalHashing(splitLicenseDob(finalHashing(splitLicenseDob(myDL)))))
