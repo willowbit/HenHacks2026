@@ -14,3 +14,6 @@ DOB = stuff[12].split("DBB")[1]
 
 NumAndDOB = str(DLN) + str(DOB)
 print(NumAndDOB)
+
+with open("tmp.txt", "a") as f:
+    f.write(NumAndDOB)
